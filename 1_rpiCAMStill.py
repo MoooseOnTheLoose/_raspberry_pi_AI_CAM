@@ -7,6 +7,8 @@ FALLBACK_DIR = "/home/user/images"
 LOG_FILE = "/var/log/rpicam/rpicam.log"
 # cam settings
 SEG_MS = "2000" #2 seconds for settle
+def main():
+    rpiCAMStill()
 def rpiCAMStill():
     session_ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     os.makedirs(IMAGE_DIR, exist_ok=True)
@@ -33,8 +35,6 @@ def rpiCAMStill():
         finally:
             end_ts = datetime.now().strftime("%Y%m%d_%H%M%S")
             log.write(f"=== Still Capture ended (session {session_ts}, ended {end_ts}) ===\n".encode())
-def main():
-    rpiCAMStill()
 if __name__ == "__main__":
     try:
         main()
