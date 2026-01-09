@@ -12,6 +12,8 @@ FPS = "15"
 BITRATE = "2000000" # 2 Mbps
 # disk guard
 MIN_FREE_GB = 100
+def main():
+    rpiVIDSec()
 def rpiVIDSec():
     session_ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     os.makedirs(VIDEO_DIR, exist_ok=True)
@@ -50,8 +52,6 @@ def rpiVIDSec():
         finally:
             end_ts = datetime.now().strftime("%Y%m%d_%H%M%S")
             log.write(f"=== Vid-Sec ended (session {session_ts}, ended {end_ts}) ===\n".encode())
-def main():
-    rpiVIDSec()
 if __name__ == "__main__":
     try:
         main()
