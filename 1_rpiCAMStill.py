@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 # Take a single picture with rpicam
 import os, subprocess
 from datetime import datetime
