@@ -2,7 +2,6 @@
 # INDEFINITE recording of 10 minute clips till MIN_FREE_GB or Ctrl-C
 import os, shutil, subprocess
 from datetime import datetime
-#!/usr/bin/env python3
 VIDEO_DIR = "/media/user/disk/videos"
 FALLBACK_DIR = "/home/user/videos"
 LOG_FILE = "/var/log/rpicam/rpicam.log"
