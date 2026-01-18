@@ -2,6 +2,11 @@
 """
 AICAM_Drone.py — Airborne object clipper (Drone/Airplane)
 
+Legacy Caffe-SSD implementation
+Maintained for compatibility and reference
+Not recommended for new deployments. Manipukates the classes
+bird and aeroplane to trick that it is a drone. 
+
 Outputs (project parity target)
 - logs/aicam_drone.log        : rotating operational log (unchanged)
 - logs/events.jsonl           : rotating structured events (unchanged)
